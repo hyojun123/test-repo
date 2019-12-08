@@ -10,8 +10,8 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=build/libs/demo-0.0.1.jar
+ARG JAR_FILE=./build/libs/demo-0.0.1.jar
 
 
 # Run the jar file
-ENTRYPOINT ["java","-jar","./build/libs/demo-0.0.1.jar"]
+ENTRYPOINT ["java","-jar","${JAR_FILE}"]
