@@ -14,4 +14,4 @@ ARG JAR_FILE=build/libs/demo-0.0.1.jar
 
 
 # Run the jar file
-ENTRYPOINT ["java","-jar","/demo-0.0.1.jar"]
+ENTRYPOINT ["java","-jar","./build/libs/demo-0.0.1.jar"]
