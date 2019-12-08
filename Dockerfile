@@ -1,13 +1,12 @@
 # Start with a base image containing Java runtime
-FROM java:8
+FROM rtfpessoa/ubuntu-jdk8
 # Add Author info
 LABEL maintainer="chlgkwk123@nate.com"
 
-# Add a volume to /tmp
-VOLUME /tmp
+ADD ./build/libs/demo-0.0.1.jar app.jar
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
 # Run the jar file
-ENTRYPOINT ["java","-jar", "./build/libs/demo-0.0.1.jar"]
+ENTRYPOINT ["java","-jar", "/app.jar"]
